@@ -11,16 +11,12 @@ export default function Nav() {
 
             const bar: HTMLElement|null = document.getElementById("nav-bar")
 
-                                if (bar == null) return;
+            if (bar == null) return;
 
-                                bar.classList.remove("opacity-0")
-                                bar.classList.add("opacity-100")
+            bar.classList.remove("opacity-0")
+            bar.classList.add("opacity-100")
 
         }, 4500)
-
-        
-
-
     })
 
 

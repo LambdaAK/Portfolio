@@ -23,14 +23,10 @@ const max = attributeCollection.length - 1;
 export default function Attributes() {
 
     const [num, setNum] = useState(0)
-    
-    // make this element scroll through the attributes
-    // every 5 seconds
-
 
     useEffect(() => {
         const f  = async () => {
-            await sleep(4000)
+            await sleep(2000)
 
             // change opacity
 
@@ -40,13 +36,12 @@ export default function Attributes() {
             attributes.classList.remove("opacity-100")
             attributes.classList.add("opacity-0")
 
-            await sleep(1000)
+            await sleep(700)
 
-            // change the attribute
-            setNum(num + 1)
-
-            if (num == attributeCollection.length) {
+            if (num == max) {
                 setNum(0)
+            } else {
+                setNum(num + 1)
             }
 
             // put the opacity back  
@@ -59,7 +54,7 @@ export default function Attributes() {
 
 
     return (
-        <div id="attributes" className="transition-all transform opacity-100 duration-1000">
+        <div id="attributes" className="transition-all transform opacity-100 duration-500">
             <Attribute num={num} />
         </div>
     )
