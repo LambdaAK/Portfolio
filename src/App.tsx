@@ -6,14 +6,12 @@ import Index from './pages/Index'
 export default function App() {
   return (
 
-    <div className="bg-black min-h-screen">
+    <div className="bg-black min-h-screen scroll-smooth">
 
 
             <div className="
             
-              min-h-screen
-            
-              flex items-center justify-center -translate-y-64
+              min-h-screen flex items-center justify-center
 
             ">
 
@@ -28,6 +26,9 @@ export default function App() {
             </div>
 
             </div>
+
+            <hr className=""/>
+
 
           <Index/>
     </div>

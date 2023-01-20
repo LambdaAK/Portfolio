@@ -18,7 +18,19 @@ export default function Welcome() {
 
 
         }, 6000)
-    })
+
+        setTimeout(() => {
+
+            const bar: HTMLElement|null = document.getElementById("welcome")
+
+                                if (bar == null) return;
+
+                                bar.classList.remove("opacity-100")
+                                bar.classList.add("opacity-0")
+
+
+        }, 10000)
+    }, [])
 
 
 

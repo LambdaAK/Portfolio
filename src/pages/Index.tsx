@@ -7,13 +7,12 @@ export default function Index() {
         
         className="
         
+        
                 
 
         "
         
         >
-
-        <AboutMeSection/>
 
 
         </div>

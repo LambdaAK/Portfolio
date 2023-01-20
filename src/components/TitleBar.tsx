@@ -1,7 +1,5 @@
 import { useEffect } from "react"
-
-
-
+import Attributes from "./Attributes";
 
 
 
@@ -31,12 +29,18 @@ export default function TitleBar() {
 
         }, 3000)
 
+        // make the attributes element appear after 4500
+        setTimeout(() => {
+            const bar: HTMLElement|null = document.getElementById("attributes-wrapper")
 
+                    if (bar == null) return;
 
-        
+                    bar.classList.remove("opacity-0")
+                    bar.classList.add("opacity-100")
+
+        }, 4500)
+
     })
-
-
 
 
     return(
@@ -55,6 +59,14 @@ export default function TitleBar() {
                     Aspiring Software Engineer
 
                 </span>
+
+                <span id="attributes-wrapper" className="flex justify-center pt-10 opacity-0 transition transform duration-1000">
+
+                    <Attributes/>
+
+                </span>
+
+                
 
         </div>
     )

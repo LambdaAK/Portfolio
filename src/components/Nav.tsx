@@ -4,8 +4,6 @@ import Person from "./icons/Person"
 
 export default function Nav() {
 
-
-
     useEffect(() => {
 
 
@@ -24,11 +22,6 @@ export default function Nav() {
 
 
     })
-
-
-
-
-
 
 
     return (
@@ -83,9 +76,8 @@ function Link(props: LinkProps) {
                 <a href={props.href} className="">{props.content}</a>
 
 
+
                 <props.icon/>
-
-
 
 
             </div>
@@ -96,3 +88,4 @@ function Link(props: LinkProps) {
 
     
 }
+

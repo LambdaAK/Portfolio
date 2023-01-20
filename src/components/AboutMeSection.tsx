@@ -3,7 +3,7 @@ import CodeAboutMe from "./CodeAboutMe"
 
 export default function AboutMeSection() {
     return (
-        <div id="about" className="text-white text-3xl h-auto float-left pt-12">
+        <div id="about" className="text-white text-3xl min-h-screen float-left pt-12 bg-black">
             
 
             <div className="flex justify-center"><Header/></div>
