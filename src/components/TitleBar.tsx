@@ -1,11 +1,48 @@
+import { useEffect } from "react"
+
+
+
 
 
 
 export default function TitleBar() {
-    return(
-        <div>
 
-                <span className=" text-blue flex justify-center pb-12 text-9xl">
+
+    useEffect(() => {
+
+
+        setTimeout(() => {
+            const bar: HTMLElement|null = document.getElementById("title-bar")
+
+                    if (bar == null) return;
+
+                    bar.classList.remove("opacity-0")
+                    bar.classList.add("opacity-100")
+
+        }, 1500)
+
+        setTimeout(() => {
+            const bar: HTMLElement|null = document.getElementById("title-description")
+
+                    if (bar == null) return;
+
+                    bar.classList.remove("opacity-0")
+                    bar.classList.add("opacity-100")
+
+        }, 3000)
+
+
+
+        
+    })
+
+
+
+
+    return(
+        <div className="">
+
+                <span id="title-bar" className=" text-blue flex justify-center pb-12 text-9xl opacity-0 transition transform duration-1000">
                     
                     Alex Kozik
                     
@@ -13,7 +50,7 @@ export default function TitleBar() {
 
                 
 
-                <span className="text-4xl flex justify-center text-slate-500">
+                <span id="title-description" className="text-4xl flex justify-center text-slate-500 opacity-0 transition transform duration-1000">
 
                     Aspiring Software Engineer
 
