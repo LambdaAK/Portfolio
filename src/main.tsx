@@ -11,7 +11,7 @@ Prism.highlightAll()
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  
+
     <App />
   
 )

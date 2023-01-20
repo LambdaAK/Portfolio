@@ -2,6 +2,7 @@ import Nav from './components/Nav'
 import TitleBar from './components/TitleBar'
 import Welcome from './components/Welcome'
 import Index from './pages/Index'
+import Projects from './pages/Projects'
 
 export default function App() {
   return (
@@ -27,10 +28,9 @@ export default function App() {
 
             </div>
 
-            <hr className=""/>
+          <Projects/>
 
 
-          <Index/>
     </div>
     
   )
