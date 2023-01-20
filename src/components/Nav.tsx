@@ -2,16 +2,16 @@
 
 export default function Nav() {
     return (
-        <div className="flex justify-center">
 
-
-            <div><Link href="#about" content="About Me"/></div>
-            <div className="ml-20 rotate"><Link href="#projects" content="Projects"/></div>
-
-            
-            
-
+        <div>
+            <div className="flex justify-center">
+                <div><Link href="#about" content="About Me"/></div>
+                <div className="ml-20 rotate"><Link href="#projects" content="Projects"/></div>
+            </div>
+            <hr className="mt-2"/>
         </div>
+
+        
     )
 }
 
@@ -42,7 +42,7 @@ function Link(props: LinkProps) {
 
             transform
 
-            hover:opacity-100 hover:rotate-12
+            hover:opacity-100 hover:-translate-y-2
             
             
             ">

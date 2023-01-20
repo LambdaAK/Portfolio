@@ -5,13 +5,32 @@ import Index from './pages/Index'
 export default function App() {
   return (
 
-    <div className="bg-black h-screen">
+    <div className="bg-black min-h-screen">
+
+
+        <div className="
+        
+          min-h-screen
+        
+          flex items-center justify-center -translate-y-64
+
+        ">
+
+            <div>
+
             <TitleBar/>
 
-            <div className="my-12"></div> /** vertical space */
+            <div className="my-20"></div>
 
 
             <Nav/>
+
+            </div>
+
+        </div>
+
+
+            
   
           <Index/>
     </div>
