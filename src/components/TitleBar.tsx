@@ -40,7 +40,7 @@ export default function TitleBar() {
 
         }, 4500)
 
-    })
+    }, [])
 
 
     return(

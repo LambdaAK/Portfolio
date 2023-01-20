@@ -43,22 +43,19 @@ export default function Attributes() {
             await sleep(1000)
 
             // change the attribute
-            if (num == max) {
+            setNum(num + 1)
+
+            if (num == attributeCollection.length) {
                 setNum(0)
-            } else {
-                setNum(num + 1)
             }
 
             // put the opacity back  
             attributes.classList.remove("opacity-0")
             attributes.classList.add("opacity-100")
-            await sleep(1000)
-
-            f() // tail recursion so constant stack space
         }
 
         f()
-    }, [])
+    }, [num])
 
 
     return (
