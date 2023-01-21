@@ -1,3 +1,5 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import AboutMeSection from './components/AboutMeSection'
 import Nav from './components/Nav'
 import TitleBar from './components/TitleBar'
 import Welcome from './components/Welcome'
@@ -8,29 +10,18 @@ export default function App() {
   return (
 
     <div className="bg-black min-h-screen scroll-smooth">
-
-
-            <div className="
             
-              min-h-screen flex items-center justify-center
 
-            ">
+          <BrowserRouter>
+            <Routes>
 
-            <div>
-
-            <TitleBar/>
-            <div className="py-8"></div>
-            <Nav/>
-            <div className="pb-96"></div>
-            <Welcome/>
-
-            </div>
-
-            </div>
-
-          <Projects/>
-
-
+              <Route path="/projects" element={<Projects/>} />
+              <Route path="/" element={<Index/>} />
+              <Route path="/about" element={<AboutMeSection/>} />
+            </Routes>
+          
+          
+          </BrowserRouter>
     </div>
     
   )

@@ -1,4 +1,4 @@
-import CodeAboutMe from "./CodeAboutMe"
+
 
 
 export default function AboutMeSection() {
@@ -11,7 +11,6 @@ export default function AboutMeSection() {
             
             <div className="h-10"></div>
             <Description/>
-            <CodeAboutMe/>
 
         </div>
     )

@@ -24,8 +24,8 @@ export default function Nav() {
 
         <div id="nav-bar" className="opacity-0 transition transform duration-1000">
             <div className="flex justify-center">
-                <div><Link href="#about" content="About Me" icon={Person}/></div>
-                <div className="ml-20 rotate"><Link href="#projects" content="Projects" icon={Computer}/></div>
+                <div><Link href="/about" content="About Me" icon={Person}/></div>
+                <div className="ml-20 rotate"><Link href="/projects" content="Projects" icon={Computer}/></div>
             </div>
             <hr className="mt-2"/>
         </div>
@@ -52,7 +52,7 @@ function Link(props: LinkProps) {
                                 
             text-blue text-5xl  rounded-lg
 
-            px-5 py-3
+            px-5
                                 
             ring ring-slate-500
 

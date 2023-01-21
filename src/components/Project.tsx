@@ -4,8 +4,6 @@ import '@splidejs/react-splide/css/skyblue';
 import { ReactElement, useEffect } from 'react';
 
 
-
-
 // this component is a showcase for one project
 // it is used in the Projects component
 // it will take the following props
@@ -18,7 +16,6 @@ import { ReactElement, useEffect } from 'react';
 interface ProjectProps {
     title: string,
     description: string,
-    githubLink: string,
     images: string[],
 }
 
@@ -45,21 +42,37 @@ export default function Project(props: ProjectProps) {
     return (
         // display an image
 
-        <div className="grid grid-cols-3">
+        <div className="px-10">
+            <div className="text-blue text-5xl pb-16 text-left relative translate-x-12">{props.title}</div>
 
-            <div>
-                <div className="text-green-500 text-4xl pb-16">{props.title}</div>
-                <div className="text-green-400 text-3xl">{props.description}</div>
-            </div>
+                <div className="grid grid-cols-3">
 
-            
-            <div className="col-span-2">
-                <Splide aria-label={props.title}>     
-                    {elements}
-                </Splide>  
-            </div>
-            
+                    <div className="grid grid-rows-2">
+
+                        <div className="text-5xl ">{props.title}</div>
+                        <div className="text-3xl text-slate-400">{props.description}</div>
+
+
+                    </div>
+
+                    <div className="col-span-2">
+                    <Splide>
+                                            {elements}
+                                        </Splide>
+
+
+                    </div>
+
+
+                    
+
+                </div>
+
+
+
         </div>
+
+        
                 
     )
 
