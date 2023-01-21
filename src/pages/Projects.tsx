@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Nav from "../components/Nav";
 import Project from "../components/Project";
 
 
@@ -28,19 +29,32 @@ export default function Projects() {
 
 
     return (
-        <div id="projects" className="transition transform opacity-0 duration-1000 pb-20">
-            <div className="text-5xl text-blue text-left pb-20 flex justify-center"> My Projects</div>
+        <div>
+            <div id="projects" className="transition transform opacity-0 duration-1000 pb-20">
+                
+                <div className="text-5xl text-blue text-left pb-20 flex justify-center"> My Projects</div>
+                    
+                <Nav/>
 
+                <div id="RGBScript-project">
+                    <div id="RBGScript-project-header" className="grid grid-cols-3">
+                        <div className="text-5xl text-blue">
+                            RGBScript <span className="text-3xl text-slate-400"> - an interpreted programming language</span>
+                        </div>
+                        <div id="RBGScript-project-pictures" className="col-span-2 grid grid-cols-2 grid-rows-2">
+                            <img src="code3.jpg" alt="" className="object-fill"/>
+                            <img src="code4.jpg" alt="" className="object-fill"/>
+                            <img src="code3.jpg" alt="" className="object-fill"/>
+                            <img src="code3.jpg" alt="" className="object-fill"/>
+                        </div>
 
-                <Project title={"RBGScript"} description={"An interpreted programming language"} images={["code3.jpg"]}/>
+                    </div>
 
-
-
-
-
-
+                </div>
+                            
+            </div>
         </div>
-        
+  
     )
 
 }

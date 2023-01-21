@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import Computer from "./icons/Computer"
+import Home from "./icons/Home"
 import Person from "./icons/Person"
 
 export default function Nav() {
@@ -16,7 +17,7 @@ export default function Nav() {
             bar.classList.remove("opacity-0")
             bar.classList.add("opacity-100")
 
-        }, 4500)
+        }, 1000)
     })
 
 
@@ -25,7 +26,8 @@ export default function Nav() {
         <div id="nav-bar" className="opacity-0 transition transform duration-1000">
             <div className="flex justify-center">
                 <div><Link href="/about" content="About Me" icon={Person}/></div>
-                <div className="ml-20 rotate"><Link href="/projects" content="Projects" icon={Computer}/></div>
+                <div className="ml-20"><Link href="/" content="Home" icon={Home}/></div>
+                <div className="ml-20"><Link href="/projects" content="Projects" icon={Computer}/></div>
             </div>
             <hr className="mt-2"/>
         </div>
