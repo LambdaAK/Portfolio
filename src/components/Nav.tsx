@@ -64,7 +64,12 @@ function Link(props: LinkProps) {
 
             transform
 
-            hover:opacity-100 hover:-translate-y-2
+            bg-slate-800
+
+            hover:opacity-90 hover:-translate-y-2
+
+            
+            
 
             flex
             
