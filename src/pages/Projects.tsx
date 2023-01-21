@@ -36,16 +36,18 @@ export default function Projects() {
                     
                 <Nav/>
 
-                <div id="RGBScript-project">
+                <div id="RGBScript-project" className="mt-10">
                     <div id="RBGScript-project-header" className="grid grid-cols-3">
                         <div className="text-5xl text-blue">
                             RGBScript <span className="text-3xl text-slate-400"> - an interpreted programming language</span>
+                            <div className="mt-10 text-slate-400 text-2xl">RGBScript is a C-style, procedural programming language that supports **basic types**, **variables**, **functions**, and **control structures**.
+                                This language gets its name from the fact that it outputs programs and program results in a colorful, fun way.</div>
                         </div>
-                        <div id="RBGScript-project-pictures" className="col-span-2 grid grid-cols-2 grid-rows-2">
-                            <img src="code3.jpg" alt="" className="object-fill"/>
-                            <img src="code4.jpg" alt="" className="object-fill"/>
-                            <img src="code3.jpg" alt="" className="object-fill"/>
-                            <img src="code3.jpg" alt="" className="object-fill"/>
+                        <div id="RBGScript-project-pictures" className="col-span-2 grid grid-cols-2 grid-rows-2 gap-4">
+                            <img src="/RGBScript/RGBScript-1.jpg" alt="" className=""/>
+                            <img src="/RGBScript/RGBScript-2.jpg" alt="" className=""/>
+                            <img src="/RGBScript/RGBScript-3.jpg" alt="" className=""/>
+                            <img src="/RGBScript/RGBScript-4.jpg" alt="" className=""/>
                         </div>
 
                     </div>
