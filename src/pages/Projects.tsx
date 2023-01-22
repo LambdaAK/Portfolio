@@ -72,77 +72,10 @@ export default function Projects() {
 
                             
                             
-                            <div className="
-                            transition 
-                            opacity-60 
-                            hover:opacity-90 
-                            scale-90 
-                            hover:scale-150
-                            bg-ide
-                            flex
-                            justify-center
-                            items-center
-                            hover:translate-x-14
-                            hover:translate-y-14
-                            rounded-lg
-                            
-                            ">
-                            <img src="/RGBScript/RGBScript-1.jpg" alt=""/>
-                            </div>
-
-                            <div className="
-                            transition 
-                            opacity-60 
-                            hover:opacity-90 
-                            scale-90 
-                            hover:scale-150
-                            bg-ide
-                            flex
-                            justify-center
-                            items-center
-                            hover:-translate-x-14
-                            hover:translate-y-14
-                            rounded-lg
-                            
-                            ">
-                            <img src="/RGBScript/RGBScript-2.jpg" alt=""/>
-                            </div>
-
-                            <div className="
-                            transition 
-                            opacity-60 
-                            hover:opacity-90 
-                            scale-90 
-                            hover:scale-150
-                            bg-ide
-                            flex
-                            justify-center
-                            items-center
-                            hover:translate-x-14
-                            hover:-translate-y-14
-                            rounded-lg
-                            
-                            ">
-                            <img src="/RGBScript/RGBScript-3.jpg" alt=""/>
-                            </div>
-
-                            <div className="
-                            transition 
-                            opacity-60 
-                            hover:opacity-90 
-                            scale-90 
-                            hover:scale-150
-                            bg-ide
-                            flex
-                            justify-center
-                            items-center
-                            hover:-translate-x-14
-                            hover:-translate-y-14
-                            rounded-lg
-                            
-                            ">
-                            <img src="/RGBScript/RGBScript-4.jpg" alt=""/>
-                            </div>
+                            <ProjectImage src={"/RGBScript/RGBScript-1.jpg"} alt={""} bg={"bg-ide"} xDir={1} yDir={1}/>
+                            <ProjectImage src={"/RGBScript/RGBScript-2.jpg"} alt={""} bg={"bg-ide"} xDir={-1} yDir={1}/>
+                            <ProjectImage src={"/RGBScript/RGBScript-3.jpg"} alt={""} bg={"bg-ide"} xDir={1} yDir={-1}/>
+                            <ProjectImage src={"/RGBScript/RGBScript-4.jpg"} alt={""} bg={"bg-ide"} xDir={-1} yDir={-1}/>
                         </div>
 
                     </div>
@@ -158,21 +91,40 @@ export default function Projects() {
 
 
 
+interface ProjectImageProps {
+    src: string;
+    alt: string;
+    bg: string; // this is a class for the
+    xDir: number // + 1 or -1
+    yDir: number // + 1 or -1
+}
+
+
+function ProjectImage(props: ProjectImageProps) {
+
+    let classes:string = "transition opacity-60 scale-90 flex justify-center items-center rounded-lg hover:opacity-90 hover:scale-150"
+
+    classes += " " + props.bg
+
+    if (props.xDir == 1) {
+        classes += " hover:translate-x-14"
+    }
+    else if (props.xDir == -1) {
+        classes += " hover:-translate-x-14"
+    }
+
+    if (props.yDir == 1) {
+        classes += " hover:translate-y-14"
+    }
+    else if (props.yDir == -1) {
+        classes += " hover:-translate-y-14"
+    }
 
 
 
-/*
-return (
-        <div id="projects" className="transition transform opacity-0 duration-1000 pb-20">
-            <div className="text-5xl text-blue text-left pb-20 flex justify-center"> My Projects</div>
-
-                    <Project
-                    title="RGBScript" 
-                    description={RBGScriptDescription}
-                    githubLink={"www.google.com"} 
-                    images={["code3.jpg"]} 
-                    />    
+    return (
+        <div className={classes}>
+            <img src="/RGBScript/RGBScript-1.jpg" alt={props.alt}/>
         </div>
-        
     )
-*/
+}
