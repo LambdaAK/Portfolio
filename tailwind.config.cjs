@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         purple: '#7e22ce',
         blue: '#0E8595',
+        ide: '#202531'
       }
     },
   },

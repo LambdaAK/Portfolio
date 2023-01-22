@@ -1,6 +1,4 @@
 
-
-
 export default function AboutMeSection() {
     return (
         <div id="about" className="text-white text-3xl min-h-screen float-left pt-12 bg-black">

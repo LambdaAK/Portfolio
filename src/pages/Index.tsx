@@ -1,6 +1,7 @@
 import AboutMeSection from "../components/AboutMeSection";
 import Nav from "../components/Nav";
 import TitleBar from "../components/TitleBar";
+import Welcome from "../components/Welcome";
 
 
 export default function Index() {
@@ -16,6 +17,9 @@ export default function Index() {
                 <div className="py-8"></div>
                 <Nav/>
 
+                <div className="py-8"></div>
+
+                <Welcome/>
                 
               </div>
 

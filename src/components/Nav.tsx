@@ -29,7 +29,7 @@ export default function Nav() {
                 <div className="ml-20"><Link href="/" content="Home" icon={Home}/></div>
                 <div className="ml-20"><Link href="/projects" content="Projects" icon={Computer}/></div>
             </div>
-            <hr className="mt-2"/>
+            <hr className="mt-3"/>
         </div>
 
         
