@@ -3,7 +3,7 @@ import Nav from "../components/Nav";
 import Project from "../components/Project";
 import "./css/Projects.css"
 
-const RBGScriptDescription:string = "RGBScript is a C-style, procedural programming language that supports **basic types**, **variables**, **functions**, and control structures. This language gets its name from the fact that it outputs programs and program results in a colorful, fun way."
+
 
 // transition handler for RGBScript
 const handleClickRGBScript = (e:SyntheticEvent) => {
@@ -115,9 +115,47 @@ export default function Projects() {
                             onClick={handleClickRGBScript}
                             >
                                 Tau <span className="text-xl text-slate-500"> <br/>A Discord bot written with Discord.js</span>
-                                <div className="mt-10 text-slate-400 text-lg">Tau is a fully-featured discord bot with music playing functionality, moderation capabilities, and other utilities.</div>
+                                <div className="mt-10 text-slate-400 text-lg">Tau is a fully-featured discord bot with music playing functionality, moderation capabilities, and other utilities. 
+                                Tau is written in TypeScript and runs with Node.js with transpilation to JavaScript.</div>
                             </div>
                             <div id="RBGScript-project-pictures" className="col-span-2 grid grid-cols-2 grid-rows-2 gap-2 mr-5">
+                                <ProjectImage src={"/RGBScript/RGBScript-1.jpg"} alt={""} bg={"bg-ide"} xDir={1} yDir={1}/>
+                                <ProjectImage src={"/RGBScript/RGBScript-2.jpg"} alt={""} bg={"bg-ide"} xDir={-1} yDir={1}/>
+                                <ProjectImage src={"/RGBScript/RGBScript-3.jpg"} alt={""} bg={"bg-ide"} xDir={1} yDir={-1}/>
+                                <ProjectImage src={"/RGBScript/RGBScript-4.jpg"} alt={""} bg={"bg-ide"} xDir={-1} yDir={-1}/>
+                            </div>
+
+
+                    </div>
+
+
+                </div>
+
+                <div id="Critterworld-project" className="mt-10 mx-5">
+
+                    <div id="Critterworld-header" className="grid grid-cols-3">
+                        <div className="
+                            text-3xl
+                            text-blue
+                            transition transform
+                            opacity-60
+
+                            hover:translate-x-10
+                            hover:scale-125
+                            hover:opacity-90
+
+                            glassmorphism
+                            px-5 py-5 mr-10 
+
+                            h-full
+
+                            "
+                            onClick={handleClickRGBScript}
+                            >
+                                Critterworld <span className="text-xl text-slate-500"> <br/>An evolution simulator written in Java.</span>
+                                <div className="mt-10 text-slate-400 text-lg">Critter world is an evolution simulator written in Java, featuring a recursive descent parsed programming language to model the behavior of subjects.</div>
+                            </div>
+                            <div id="Critterworld-project-pictures" className="col-span-2 grid grid-cols-2 grid-rows-2 gap-2 mr-5">
                                 <ProjectImage src={"/RGBScript/RGBScript-1.jpg"} alt={""} bg={"bg-ide"} xDir={1} yDir={1}/>
                                 <ProjectImage src={"/RGBScript/RGBScript-2.jpg"} alt={""} bg={"bg-ide"} xDir={-1} yDir={1}/>
                                 <ProjectImage src={"/RGBScript/RGBScript-3.jpg"} alt={""} bg={"bg-ide"} xDir={1} yDir={-1}/>
