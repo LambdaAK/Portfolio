@@ -3,17 +3,32 @@ import Nav from "../components/Nav";
 import Project from "../components/Project";
 import "./css/Projects.css"
 
-
 const RBGScriptDescription:string = "RGBScript is a C-style, procedural programming language that supports **basic types**, **variables**, **functions**, and control structures. This language gets its name from the fact that it outputs programs and program results in a colorful, fun way."
 
-
-
-
+// transition handler for RGBScript
 const handleClickRGBScript = (e:SyntheticEvent) => {
     e.preventDefault();
-    location.replace("RGBScript")
-}
 
+    const images = document.getElementsByClassName("project-image")
+
+    for (let i = 0; i < images.length; i++) {
+        images[i].classList.remove("opacity-50")
+        images[i].classList.add("opacity-0")
+    }
+
+    const header = document.getElementById("RBGScript-project-header")
+
+    if (header == null) return
+
+    header.classList.remove("opacity-60")
+    header.classList.add("opacity-0")
+
+    // navigate to RGBScript page
+    setTimeout(() => {
+        location.replace("RGBScript")
+    }, 5000)
+   
+}
 
 
 export default function Projects() {
@@ -44,23 +59,22 @@ export default function Projects() {
                 <Nav/>
 
                 <div id="RGBScript-project" className="mt-10 mx-5">
-                    <div id="RBGScript-project-header" className="grid grid-cols-3">
+                    <div id="RGBScript-project-header" className="grid grid-cols-3">
                         <div className="
-                        text-3xl 
+                        text-3xl
                         text-blue
-                        
                         transition transform
                         opacity-60
-                        hover:opacity-90 bg-gray-900
-                        rounded-2xl
-                        hover:translate-x-20
-                        hover:scale-125
-                        scale-90
 
+                        hover:translate-x-10
+                        hover:scale-125
+                        hover:opacity-90
+
+                        glassmorphism
                         px-5 py-5 mr-10 
 
-                        hover:cursor-pointer
-                        
+                        h-full
+
                         "
                         onClick={handleClickRGBScript}
                         >
@@ -69,9 +83,6 @@ export default function Projects() {
                                 This language gets its name from the fact that it outputs programs and program results in a colorful, fun way.</div>
                         </div>
                         <div id="RBGScript-project-pictures" className="col-span-2 grid grid-cols-2 grid-rows-2 gap-2 mr-5">
-
-                            
-                            
                             <ProjectImage src={"/RGBScript/RGBScript-1.jpg"} alt={""} bg={"bg-ide"} xDir={1} yDir={1}/>
                             <ProjectImage src={"/RGBScript/RGBScript-2.jpg"} alt={""} bg={"bg-ide"} xDir={-1} yDir={1}/>
                             <ProjectImage src={"/RGBScript/RGBScript-3.jpg"} alt={""} bg={"bg-ide"} xDir={1} yDir={-1}/>
@@ -81,6 +92,43 @@ export default function Projects() {
                     </div>
 
                 </div>
+
+                <div id="Tau-project" className="mt-10 mx-5">
+
+                    <div id="Tau-project-header" className="grid grid-cols-3">
+                        <div className="
+                            text-3xl
+                            text-blue
+                            transition transform
+                            opacity-60
+
+                            hover:translate-x-10
+                            hover:scale-125
+                            hover:opacity-90
+
+                            glassmorphism
+                            px-5 py-5 mr-10 
+
+                            h-full
+
+                            "
+                            onClick={handleClickRGBScript}
+                            >
+                                Tau <span className="text-xl text-slate-500"> <br/>A Discord bot written with Discord.js</span>
+                                <div className="mt-10 text-slate-400 text-lg">Tau is a fully-featured discord bot with music playing functionality, moderation capabilities, and other utilities.</div>
+                            </div>
+                            <div id="RBGScript-project-pictures" className="col-span-2 grid grid-cols-2 grid-rows-2 gap-2 mr-5">
+                                <ProjectImage src={"/RGBScript/RGBScript-1.jpg"} alt={""} bg={"bg-ide"} xDir={1} yDir={1}/>
+                                <ProjectImage src={"/RGBScript/RGBScript-2.jpg"} alt={""} bg={"bg-ide"} xDir={-1} yDir={1}/>
+                                <ProjectImage src={"/RGBScript/RGBScript-3.jpg"} alt={""} bg={"bg-ide"} xDir={1} yDir={-1}/>
+                                <ProjectImage src={"/RGBScript/RGBScript-4.jpg"} alt={""} bg={"bg-ide"} xDir={-1} yDir={-1}/>
+                            </div>
+
+
+                    </div>
+
+
+                </div>
                             
             </div>
         </div>
@@ -88,7 +136,6 @@ export default function Projects() {
     )
 
 }
-
 
 
 interface ProjectImageProps {
@@ -102,7 +149,7 @@ interface ProjectImageProps {
 
 function ProjectImage(props: ProjectImageProps) {
 
-    let classes:string = "transition opacity-60 scale-90 flex justify-center items-center rounded-lg hover:opacity-90 hover:scale-150"
+    let classes:string = "transition opacity-50 scale-90 flex justify-center items-center rounded-lg hover:opacity-90 hover:scale-150 project-image"
 
     classes += " " + props.bg
 
@@ -124,7 +171,7 @@ function ProjectImage(props: ProjectImageProps) {
 
     return (
         <div className={classes}>
-            <img src="/RGBScript/RGBScript-1.jpg" alt={props.alt}/>
+            <img src={props.src} alt={props.alt}/>
         </div>
     )
 }

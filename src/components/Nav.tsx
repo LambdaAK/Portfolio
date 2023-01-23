@@ -49,7 +49,6 @@ function Link(props: LinkProps) {
     return (
 
             <div className="
-            
             relative
                                 
             text-blue text-5xl  rounded-lg
@@ -64,25 +63,15 @@ function Link(props: LinkProps) {
 
             transform
 
-            bg-slate-800
+            glassmorphism
 
             hover:opacity-90 hover:-translate-y-2
-
             
-            
-
             flex
-            
-            
             ">
 
                 <a href={props.href} className="">{props.content}</a>
-
-
-
                 <props.icon/>
-
-
             </div>
 
             
