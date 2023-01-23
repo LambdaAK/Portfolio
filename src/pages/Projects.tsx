@@ -201,31 +201,30 @@ function ProjectImage(props: ProjectImageProps) {
         'hover:opacity-90',
         'hover:scale-150',
         'project-image',
+        props.bg
     ]
+
+    if (props.xDir == 1) {
+        classesArr.push("hover:translate-x-14")
+    }
+    else if (props.xDir == -1) {
+        classesArr.push("hover:-translate-x-14")
+    }
+
+    if (props.yDir == 1) {
+        classesArr.push("hover:translate-y-14")
+    }
+    else if (props.yDir == -1) {
+        classesArr.push("hover:-translate-y-14")
+    }
+
 
     let classes:string = "";
 
     classesArr.forEach((c) => {
         classes += c + " ";
     })
-
-    classes += " " + props.bg
-
-    if (props.xDir == 1) {
-        classes += " hover:translate-x-14"
-    }
-    else if (props.xDir == -1) {
-        classes += " hover:-translate-x-14"
-    }
-
-    if (props.yDir == 1) {
-        classes += " hover:translate-y-14"
-    }
-    else if (props.yDir == -1) {
-        classes += " hover:-translate-y-14"
-    }
-
-
+    
 
     return (
         <div className={classes}>
