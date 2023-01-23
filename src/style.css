@@ -517,6 +517,10 @@ video {
   position: relative;
 }
 
+.z-0 {
+  z-index: 0;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -836,6 +840,10 @@ html {
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.hover\:z-10:hover {
+  z-index: 10;
 }
 
 .hover\:-translate-y-2:hover {

@@ -187,7 +187,27 @@ interface ProjectImageProps {
 
 function ProjectImage(props: ProjectImageProps) {
 
-    let classes:string = "transition opacity-50 scale-90 flex justify-center items-center rounded-lg hover:opacity-90 hover:scale-150 project-image"
+    let classesArr: string[] = [
+        'transition',
+        'opacity-60',
+        'transform',
+        'scale-90',
+        'flex',
+        'justify-center',
+        'items-center',
+        'rounded-lg',
+        'z-0',
+        'hover:z-10',
+        'hover:opacity-90',
+        'hover:scale-150',
+        'project-image',
+    ]
+
+    let classes:string = "";
+
+    classesArr.forEach((c) => {
+        classes += c + " ";
+    })
 
     classes += " " + props.bg
 
